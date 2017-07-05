@@ -21,8 +21,8 @@ try {
 
 $dbAdapter = new DatabaseAdapter($pdo);
 
-$app->add(new ShowCommand($dbAdapter));
 $app->add(new AddCommand($dbAdapter));
+$app->add(new ShowCommand($dbAdapter));
 $app->add(new CompleteCommand($dbAdapter));
 
 $app->run();
